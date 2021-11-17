@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="34.0" prefHeight="41.0" prefWidth="274.0" text="User management">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="userList" layoutX="177.0" layoutY="45.0" onMouseClicked="#getSelected" prefHeight="355.0" prefWidth="423.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="41.0" text="id" />
+          <TableColumn fx:id="col_username" prefWidth="92.0" text="Username" />
+            <TableColumn fx:id="col_password" prefWidth="94.0" text="Password" />
+            <TableColumn fx:id="col_email" prefWidth="108.0" text="email" />
+            <TableColumn fx:id="col_type" prefWidth="132.0" text="Type" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutY="45.0" prefHeight="355.0" prefWidth="176.0">
+         <children>
+            <Button layoutX="39.0" layoutY="249.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#addButtonAction" prefHeight="30.0" prefWidth="74.0" text="Add" />
+            <Button layoutX="39.0" layoutY="282.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#editButtonAction" prefHeight="30.0" prefWidth="74.0" text="Edit" />
+            <Button layoutX="39.0" layoutY="315.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="30.0" prefWidth="74.0" text="Delete" />
+            <TextField fx:id="txt_username" layoutX="8.0" layoutY="42.0" promptText="Username" />
+            <TextField fx:id="txt_password" layoutX="8.0" layoutY="70.0" promptText="Password" />
+            <TextField fx:id="txt_email" layoutX="8.0" layoutY="99.0" promptText="Email" />
+            <TextField fx:id="txt_id" layoutX="8.0" layoutY="14.0" promptText="ID" />
+            <ChoiceBox fx:id="rolePicker" layoutX="7.0" layoutY="129.0" onMouseClicked="#getRoleClicked" prefHeight="25.0" prefWidth="161.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
